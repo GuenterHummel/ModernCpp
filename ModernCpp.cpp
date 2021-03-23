@@ -12,14 +12,14 @@ int main()
 
     auto *b = static_cast<void*>(a);
     auto *c = static_cast<int*>(b);
-    std::cout << "value = " << *c;
+    std::cout << "value = " << *c << std::endl;
 
     delete a;
 
     auto *a1 = new int(3);
     auto *b1 = reinterpret_cast<void*>(a1);
     auto *c1 = static_cast<int*>(b1);
-    std::cout << "value = " << *c1;
+    std::cout << "value = " << *c1 << std::endl;
 
     delete a1;
 
