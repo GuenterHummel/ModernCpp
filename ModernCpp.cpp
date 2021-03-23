@@ -7,21 +7,23 @@ int main()
 {
     std::cout << "Hello World!\n";
 
-    int* a = new int();
+    auto *a = new int();
     *a = 2;
 
-    void* b = static_cast<void*>(a);
-    int* c = static_cast<int*>(b);
+    auto *b = static_cast<void*>(a);
+    auto *c = static_cast<int*>(b);
     std::cout << "value = " << *c;
 
     delete a;
 
-    int* a1 = new int(3);
-    void* b1 = reinterpret_cast<void*>(a1);
-    int* c1 = reinterpret_cast<int*>(b1);
+    auto *a1 = new int(3);
+    auto *b1 = reinterpret_cast<void*>(a1);
+    auto *c1 = static_cast<int*>(b1);
     std::cout << "value = " << *c1;
 
     delete a1;
+
+    return 0;
 }
 
 // Programm ausführen: STRG+F5 oder Menüeintrag "Debuggen" > "Starten ohne Debuggen starten"
