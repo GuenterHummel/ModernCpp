@@ -2,11 +2,32 @@
 //
 
 #include <iostream>
+#include <vector>
+#include <algorithm>
+
+void print_vector (const std::string &description, const std::vector <int> &v);
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "Modern C++ -- start!\n";
 
+    std::vector<int> v = { 5, 9, -1, 200, 0, -22, 8, 100, 2, -220};
+    
+    print_vector("Content of vector        : ", v);
+    
+    sort(v.begin(), v.end());
+    
+    print_vector("Content of sorted vector : ", v);
+    
+    std::cout << "sizeof (bool)   = " << sizeof(bool)   << "\n";
+    std::cout << "sizeof (short)  = " << sizeof(short)  << "\n";
+    std::cout << "sizeof (char)   = " << sizeof(char)   << "\n";
+    std::cout << "sizeof (float)  = " << sizeof(float)  << "\n";
+    std::cout << "sizeof (double) = " << sizeof(double) << "\n";
+    std::cout << "sizeof (void*)  = " << sizeof(void*)  << "\n";
+    
+    std::cout << "Now for some pointer handling" << std::endl;
+    
     auto *a = new int();
     *a = 2;
 
@@ -23,17 +44,17 @@ int main()
 
     delete a1;
 
-    std::cout << "The end." << std::endl;
+    std::cout << "Modern C++ -- The end." << std::endl;
     return 0;
 }
 
-// Programm ausführen: STRG+F5 oder Menüeintrag "Debuggen" > "Starten ohne Debuggen starten"
-// Programm debuggen: F5 oder "Debuggen" > Menü "Debuggen starten"
-
-// Tipps für den Einstieg: 
-//   1. Verwenden Sie das Projektmappen-Explorer-Fenster zum Hinzufügen/Verwalten von Dateien.
-//   2. Verwenden Sie das Team Explorer-Fenster zum Herstellen einer Verbindung mit der Quellcodeverwaltung.
-//   3. Verwenden Sie das Ausgabefenster, um die Buildausgabe und andere Nachrichten anzuzeigen.
-//   4. Verwenden Sie das Fenster "Fehlerliste", um Fehler anzuzeigen.
-//   5. Wechseln Sie zu "Projekt" > "Neues Element hinzufügen", um neue Codedateien zu erstellen, bzw. zu "Projekt" > "Vorhandenes Element hinzufügen", um dem Projekt vorhandene Codedateien hinzuzufügen.
-//   6. Um dieses Projekt später erneut zu öffnen, wechseln Sie zu "Datei" > "Öffnen" > "Projekt", und wählen Sie die SLN-Datei aus.
+void print_vector (const std::string &description, const std::vector <int> &v) {
+    
+    std::cout << description << " = ";
+    
+    for (int i = 0; i < v.size(); ++i) {
+        std::cout << v[i] << ((i != v.size()-1) ? ", " : "");
+    }
+    
+    std::cout << "\n";
+}
