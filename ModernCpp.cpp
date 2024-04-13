@@ -23,7 +23,7 @@ int main()
 
     delete a1;
 
-    std::cout << "The end.";
+    std::cout << "The end." << std::endl;
     return 0;
 }
 
