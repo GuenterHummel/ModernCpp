@@ -25,7 +25,7 @@ int main()
     std::cout << "sizeof (float)  = " << sizeof(float)  << "\n";
     std::cout << "sizeof (double) = " << sizeof(double) << "\n";
     std::cout << "sizeof (void*)  = " << sizeof(void*)  << "\n";
-    
+
     std::cout << "Now for some pointer handling" << std::endl;
     
     auto *a = new int();
