@@ -340,3 +340,4 @@ ASALocalRun/
 healthchecksdb
 /.metadata
 /out/build/x64-Debug
+ModernCpp.xcodeproj/project.xcworkspace/xcuserdata/*
