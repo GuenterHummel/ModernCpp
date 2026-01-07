@@ -6,6 +6,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <string>
 
 void print_vector (const std::string &description, const std::vector <int> &v);
 
